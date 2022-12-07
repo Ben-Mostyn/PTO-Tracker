@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  front-end:
+    build: .
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "8000:8000"
